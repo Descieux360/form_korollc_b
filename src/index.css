@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: 'Lora', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Warm & Human Palette (Stone & Rose) */
+  --color-rose-50: #FFF1F2;
+  --color-rose-500: #F43F5E;
+  --color-rose-600: #E11D48;
+  --color-rose-700: #BE123C;
+
+  --color-stone-50: #FAFAF9;
+  --color-stone-100: #F5F5F4;
+  --color-stone-200: #E7E5E4;
+  --color-stone-300: #D6D3D1;
+  --color-stone-400: #A8A29E;
+  --color-stone-500: #78716C;
+  --color-stone-600: #57534E;
+  --color-stone-700: #44403C;
+  --color-stone-800: #292524;
+  --color-stone-900: #1C1917;
+  --color-stone-950: #0C0A09;
+
+  --color-emerald-500: #10B981;
+  --color-emerald-600: #059669;
+
+  /* Semantic Mappings */
+  --color-brand-primary: var(--color-rose-600);
+  --color-brand-primary-hover: var(--color-rose-700);
+  --color-brand-success: var(--color-emerald-600);
+  --color-brand-error: var(--color-rose-500);
+}
+
+/* Modern resets and base styles */
+body {
+  @apply bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-50 font-sans antialiased transition-colors duration-300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-stone-900 dark:text-stone-100 tracking-tight;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-300 dark:bg-stone-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-400 dark:bg-stone-600;
+}
